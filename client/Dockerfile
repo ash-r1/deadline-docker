@@ -9,6 +9,7 @@ COPY DeadlineClient-*-linux-x64-installer.run DeadlineClient-installer.run
 RUN chmod u+x DeadlineClient-installer.run && \
 	./DeadlineClient-installer.run \
 	--binariesonly true \
+	--setpermissionsclient true \
 	--mode unattended
 
 FROM ubuntu:focal
