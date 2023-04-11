@@ -101,14 +101,14 @@ services:
       - db
       - repository
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8082/"]
+      test: ["CMD", "curl", "-f", "http://localhost:8081/"]
       interval: 30s
       timeout: 5s
       retries: 10
       start_period: 1m
     ports:
-        - target: 8082
-          published: 8082
+        - target: 8081
+          published: 8081
           protocol: tcp
           mode: host
     networks:
